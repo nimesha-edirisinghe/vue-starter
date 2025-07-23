@@ -1,57 +1,29 @@
 <template>
-  <div class="home">
-    <h1>Welcome to Vue Starter</h1>
-    <p>This is the home page of your Vue.js application.</p>
-    <div class="features">
-      <h2>Features</h2>
-      <ul>
-        <li>Vue 3 with Composition API</li>
-        <li>TypeScript support</li>
-        <li>Vue Router for navigation</li>
-        <li>Vite for fast development</li>
+  <div class="max-w-4xl mx-auto p-8 text-center">
+    <h1 class="text-4xl font-bold text-green-500 mb-4">
+      Welcome to Vue Starter
+    </h1>
+    <p class="text-lg text-gray-700 mb-8">
+      This is the home page of your Vue.js application.
+    </p>
+    <div class="mt-8 text-left">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Features</h2>
+      <ul class="space-y-2">
+        <li class="py-2 border-b border-gray-200 last:border-b-0">
+          Vue 3 with Composition API
+        </li>
+        <li class="py-2 border-b border-gray-200 last:border-b-0">
+          TypeScript support
+        </li>
+        <li class="py-2 border-b border-gray-200 last:border-b-0">
+          Vue Router for navigation
+        </li>
+        <li class="py-2 border-b border-gray-200 last:border-b-0">
+          Vite for fast development
+        </li>
       </ul>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
-// Home page component logic can be added here
-</script>
-
-<style scoped>
-.home {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1 {
-  color: #42b883;
-  margin-bottom: 1rem;
-}
-
-.features {
-  margin-top: 2rem;
-  text-align: left;
-}
-
-.features h2 {
-  color: #35495e;
-  margin-bottom: 1rem;
-}
-
-.features ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.features li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.features li:last-child {
-  border-bottom: none;
-}
-</style>
+<script setup lang="ts"></script>
