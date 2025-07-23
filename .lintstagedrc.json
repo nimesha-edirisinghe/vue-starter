@@ -1,4 +1,6 @@
 {
-    "*.{js,ts,vue}": ["eslint --fix", "prettier --write"],
-    "*.{json,md,yml,yaml}": ["prettier --write"]
+    "*.{js,ts}": ["eslint --fix"],
+    "*.{json,md,yml,yaml}": [
+        "echo 'No formatter configured for these file types'"
+    ]
 }
