@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import type { RouteRecordRaw } from 'vue-router';
-
-// Import pages from centralized index
 import { Home, About, HeadlessUIDemo, NotFound } from '../pages';
 
 const routes: RouteRecordRaw[] = [
@@ -29,7 +27,6 @@ const routes: RouteRecordRaw[] = [
             title: 'Headless UI Demo',
         },
     },
-    // Add a catch-all route for 404
     {
         path: '/:pathMatch(.*)*',
         name: 'NotFound',

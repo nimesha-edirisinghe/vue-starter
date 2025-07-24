@@ -1,3 +1,58 @@
+<script setup lang="ts">
+    import { ref } from 'vue';
+    import { Button, Dropdown, Modal, Tabs } from '@/components/ui';
+    import { MenuItem } from '@headlessui/vue';
+    import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue';
+    import {
+        RadioGroup,
+        RadioGroupLabel,
+        RadioGroupOption,
+        RadioGroupDescription,
+    } from '@headlessui/vue';
+
+    // State
+    const showModal = ref(false);
+    const showConfirmModal = ref(false);
+    const enabled = ref(false);
+    const selectedPlan = ref<any>(null);
+
+    // Tabs data
+    const tabs = ref([
+        { id: 'tab1', label: 'Tab 1', content: 'Content for tab 1' },
+        { id: 'tab2', label: 'Tab 2', content: 'Content for tab 2' },
+        { id: 'tab3', label: 'Tab 3', content: 'Content for tab 3' },
+    ]);
+
+    // Plans data
+    const plans = ref([
+        {
+            id: 'startup',
+            name: 'Startup',
+            description: 'Perfect for small teams and startups.',
+        },
+        {
+            id: 'business',
+            name: 'Business',
+            description: 'Great for growing businesses.',
+        },
+        {
+            id: 'enterprise',
+            name: 'Enterprise',
+            description: 'For large organizations.',
+        },
+    ]);
+
+    // Event handlers
+    const handleTabChange = (index: number) => {
+        console.log('Tab changed to:', index);
+    };
+
+    const handleConfirm = () => {
+        console.log('Action confirmed!');
+        showConfirmModal.value = false;
+    };
+</script>
+
 <template>
     <div class="min-h-screen bg-gray-50 py-8">
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -326,58 +381,3 @@
         </div>
     </div>
 </template>
-
-<script setup lang="ts">
-    import { ref } from 'vue';
-    import { Button, Dropdown, Modal, Tabs } from '@/components/ui';
-    import { MenuItem } from '@headlessui/vue';
-    import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue';
-    import {
-        RadioGroup,
-        RadioGroupLabel,
-        RadioGroupOption,
-        RadioGroupDescription,
-    } from '@headlessui/vue';
-
-    // State
-    const showModal = ref(false);
-    const showConfirmModal = ref(false);
-    const enabled = ref(false);
-    const selectedPlan = ref<any>(null);
-
-    // Tabs data
-    const tabs = ref([
-        { id: 'tab1', label: 'Tab 1', content: 'Content for tab 1' },
-        { id: 'tab2', label: 'Tab 2', content: 'Content for tab 2' },
-        { id: 'tab3', label: 'Tab 3', content: 'Content for tab 3' },
-    ]);
-
-    // Plans data
-    const plans = ref([
-        {
-            id: 'startup',
-            name: 'Startup',
-            description: 'Perfect for small teams and startups.',
-        },
-        {
-            id: 'business',
-            name: 'Business',
-            description: 'Great for growing businesses.',
-        },
-        {
-            id: 'enterprise',
-            name: 'Enterprise',
-            description: 'For large organizations.',
-        },
-    ]);
-
-    // Event handlers
-    const handleTabChange = (index: number) => {
-        console.log('Tab changed to:', index);
-    };
-
-    const handleConfirm = () => {
-        console.log('Action confirmed!');
-        showConfirmModal.value = false;
-    };
-</script>
